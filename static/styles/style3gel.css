@@ -1,0 +1,208 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Open Sans', Arial, sans-serif;
+  }
+  h2, h4, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2, h4 {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    color: #333333;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 27px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    margin-bottom: 10px;
+  }
+  
+  .info p, li {
+    text-align: justify;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #555;
+    line-height: 22px;
+  }
+  
+  ul, li {
+    text-decoration: none;
+    list-style: disc outside;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  svg {
+    margin: 0px;
+    min-width: 24px;
+    min-height: 24px;
+  }
+  
+  
+
+  .conteiner-main {
+    display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7,600px);
+  }
+  
+  .cardContainer {
+    position: relative;
+    width: 400px;
+    height: 340px;
+    min-width: 200px;
+    min-height: 100px;
+    margin: 4px;
+    
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+  }
+  
+  .active {
+    -webkit-transform: translateZ(0px) rotateY(180deg) !important;
+            transform: translateZ(0px) rotateY(180deg) !important;
+  }
+  .active:after {
+    display: none;
+  }
+  
+  .card {
+    display: flex;
+    border:4px solid #ddd;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -moz-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: translateZ(-100px);
+            transform: translateZ(-100px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .card:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 14px 50px -4px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.4);
+  }
+  .card:hover {
+    -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+  }
+  .card:hover:after {
+    opacity: 1;
+  }
+  .card .side {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: white;
+  }
+  .card .front {
+    z-index: 2;
+  }
+  .card .back {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  .card .info {
+    padding: 16px;
+  }
+  
+  .front .img {
+    background-color: #dadce2;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 350px;
+  }
+  .front .img1 {
+    background-image: url(https://i.ytimg.com/vi/lwXxAudaJWU/maxresdefault.jpg);
+  }
+  .front .img2 {
+    background-image: url(https://img-fotki.yandex.ru/get/194550/251904653.297/0_16d693_faf2940a_XXXL.jpg);
+  }
+  .front .img3 {
+    background-image: url(https://savehistory.by/upload/iblock/230/s3mt23ocnqu0soywi0grrg6bok2p1spb.jpg);
+  }
+  .front .img4 {
+    background-image: url(https://avatars.mds.yandex.net/get-altay/367090/2a00000187bc52d7a3fc772d789efc4b24d6/orig);
+  }
+  .front .img5 {
+    background-image: url(https://kamengrad.by/wp-content/uploads/2020/03/vechnyj-ogon-v-gomele-02.jpg);
+  }
+  .front .img6 {
+    background-image: url(https://www.files.rechitsa.by/arhitekture/Park_kl.jpg);
+  }
+  .front .img7 {
+    background-image: url(https://savehistory.by/upload/iblock/e6f/l0j9d8pgs9ce0a7wygf3dg0vo2t0zg8g.jpg);
+  }
+  .front .img8 {
+    background-image: url(https://monument.goub.by/wp-content/uploads/2018/01/2_02-768x495.jpg);
+  }
+  .front .img9 {
+    background-image: url(https://monument.goub.by/wp-content/uploads/2019/06/%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB-%D0%B5%D0%BB%D1%8C%D1%81%D0%BA_1.jpg);
+  }
+  .front .img10 {
+    background-image: url(https://planetabelarus.by/upload/resize_cache/iblock/685/1330_887_18e21fe612b4afb807a26ecc22279a1d9/685e8c763a78797f6ac391ae463aa4a0.jpg);
+  }
+  .front .img11 {
+    background-image: url(https://savehistory.by/upload/iblock/4eb/noh4zlkxu65qumzpt0o1e0bncf7qy7mv.jpg);
+  }
+  .front .img12 {
+    background-image: url(https://planetabelarus.by/upload/iblock/46f/46f4a9b12827b4614b61f5c620f5765f.jpg);
+  }
+  .front .img13 {
+    background-image: url(https://static.strada.by/2022/06/15/151304.jpg);
+  }
+  .front .img14 {
+    background-image: url(http://milglory.gomel.museum.by/files/node_images/8cakh9ppjzs.jpg);
+
+    }
+  .front .img15 {
+    background-image: url(https://loev.gomel-region.by/uploads/images/Voenno-patrioticheskij-Loev1-1.jpg);
+  }
+  @media (max-width: 900px) {
+    .nav-conteiner{
+        flex-direction: column;
+    }
+    .conteiner-main {
+      grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(11,600px);
+
+    }
+    .conteiner>h1 {
+      font-size: 2em;}
+    }
+
+    @media (max-width: 600px) {
+      .nav-conteiner{
+          flex-direction: column;
+      }
+      .conteiner-main {
+        grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(21,600px);
+      }
+      .card {
+        margin-inline-start: 0;
+      }
+      .conteiner>h1 {
+        font-size: 1em;}
+      }

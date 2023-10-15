@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+}
+body{
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+.conteiner {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.918);
+    background-color: #3e4982;
+    
+    
+}
+
+h1 {
+  font-size: 3em;
+  font-style: italic;
+}
+/*фото область - центральная часть*/
+.hover-image-scale {
+    display: inline-block; 
+    overflow: hidden; /* Скрываем всё за контуром */
+  }
+  .hover-image-scale img {
+    transition: 1s; /* Время эффекта */
+    display: block; 
+    float:left; /* Выравнивание по левому краю */
+    text-align: justify;
+    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+  }
+  .hover-image-scale img:hover {
+    transform: scale(1.1); /* Увеличиваем масштаб */
+  }
+  .hover-image-scale> p {
+    text-align: justify;
+    margin: 15px;
+    font-style: italic;
+
+    
+  }
+  /*логотип*/
+.logo {
+    max-width: 100px;
+}
+
+/*меню*/
+.nav-conteiner {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.nav-conteiner>nav>ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.nav-conteiner>nav>ul>li {
+    display: block;
+    padding: 10px;
+   
+   
+}
+
+.article {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #3e4982;
+  color: #fff;
+  font-size: 1em;
+  font-style: italic;
+}
+
+
+
+@media (max-width: 900px) {
+  .nav-conteiner{
+      flex-direction: column;}
+  .conteiner>h1 {
+        font-size: 2em;}
+  
+  
+  
+
+  @media (max-width: 600px) {
+    .nav-conteiner{
+        flex-direction: column;
+    }
+    
+    .conteiner>h1 {
+      font-size: 1em;}
+
+
